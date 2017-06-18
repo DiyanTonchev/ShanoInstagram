@@ -1,0 +1,34 @@
+<header>
+    <h2>{{user.username}}</h2>
+</header>
+<div class="image-card">
+    <div class="user-info">First name: {{user.firstName}}</div>
+    <div class="user-info">Last name: {{user.lastName}}</div>
+    <div class="user-info">Age:
+        {{#if user.age}}
+        {{user.age}}
+        {{else}}
+        N/A
+        {{/if}}</div>
+    <div class="user-info">Gender:
+        {{#if user.gender}}
+        {{user.gender}}
+        {{else}}
+        N/A
+        {{/if}}
+    </div>
+</div>
+{{#each user.images}}
+<div class="image-card">
+    <figure>
+        <img src="../{{this.url}}" class="img" alt="" />
+        <figcaption>
+            {{#if this.tags}}
+            {{{this.description}}}
+            {{else}}
+             {{this.description}}
+            {{/if}}
+        </figcaption>
+    </figure>
+</div>
+{{/each}}

@@ -1,0 +1,17 @@
+<header>
+    <h2>Welcome to Shano Instagram!</h2>
+</header>
+{{#each images}}
+<div class="image-card">
+    <figure>
+        <img src="{{this.url}}" class="img" alt="" />
+        <figcaption>
+            {{#if this.tags}}
+            {{{this.description}}}
+            {{else}}
+             {{this.description}}
+            {{/if}}
+        </figcaption>
+    </figure>
+</div>
+{{/each}}

@@ -1,0 +1,13 @@
+<header>
+    <h2>{{tag}}</h2>
+</header>
+{{#each images}}
+<div class="image-card">
+    <figure>
+        <img src="../{{this.url}}" class="img" alt="" />
+        <figcaption>
+            {{{this.description}}}
+        </figcaption>
+    </figure>
+</div>
+{{/each}}
