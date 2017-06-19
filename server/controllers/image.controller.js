@@ -45,7 +45,7 @@ function addImage (req, res) {
 }
 
 function showByTag (req, res) {
-  let tag = `#${req.params.tagName}`
+  let tag = `#${req.params.tagName}`.toLocaleLowerCase()
   Image
   .find({tags: { '$in': [tag] }})
   .sort('-createdAt')
